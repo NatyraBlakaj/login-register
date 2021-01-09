@@ -1,0 +1,61 @@
+/**{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.navbari{*/
+/*    width: 90%;*/
+/*    margin-left: 5%;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+/*.container{*/
+/*    background-color: #e0e0f5;*/
+/*    height: 500px;*/
+/*    margin-top: 30px;*/
+/*}*/
+
+/*.moreinfo{*/
+/*    width: 80%;*/
+/*    margin-left: 10%;*/
+/*    padding: 10px;*/
+/*}*/
+
+/*.tasks{*/
+/*    width: 90%;*/
+/*    height: 100px;*/
+/*    background-color: #f3f3f3;*/
+/*    color:white;*/
+/*    margin-left: 5%;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    padding:10px;*/
+/*    color: black;*/
+/*    margin-top: 30px;*/
+
+/*}*/
+
+/*.totali{*/
+/*    float: right;*/
+/*    margin-top: 50px;*/
+/*}*/
+.navheader{
+    background: #AD9BAA;
+}
+#dashboard-document{
+    background: #DDDFDF;
+    height: 100vh;
+}
+div .btnshtoshpenzim{
+    background:#AD9BAA;
+}
+div .btnshtomonedha{
+    background-color: #ADB6C4;
+}
+.fa-edit{
+    color:#ADB6C4;
+}
+.fa-trash-alt{
+    color:#ADB6C4;
+}
