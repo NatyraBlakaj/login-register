@@ -13,9 +13,13 @@ class Home extends Component {
             <Formik
                 initialValues={{email: '', password: ''}}
                 onSubmit={(values, {setSubmitting}) => {
-                    Auth.login(values.email,values.password);
-                    localStorage.setItem('loggedIn', 'true');
-                    this.props.history.push('/Dashboard');
+                    if (Auth.login(values.email, values.password)) {
+                        this.props.history.push('/Dashboard');
+                    } else {
+                        alert('Kredencialet jane te gabuara')
+                    }
+                    //localStorage.setItem('loggedIn', 'true');
+                    //this.props.history.push('/Dashboard');
 
 
                 }}
