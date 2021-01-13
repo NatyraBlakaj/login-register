@@ -3,14 +3,17 @@ import './Dashboard.css';
 import {Link} from 'react-router-dom';
 import {Consumer} from "../Context";
 import firebase from "../../firebase";
+import EditOutlays from "../edit/EditOutlays";
 
 class Dashboard extends Component {
-    deleteOutlay = () => {
-    }
+
 
     render() {
+
+
         return (
             <Consumer>
+
                 {value => {
                     return (
                         <div id="dashboard-document">
@@ -23,7 +26,7 @@ class Dashboard extends Component {
                             </nav>
                             <div>
                                 <div className="container">
-                                    <div className="moreinfo d-flex justify-content-end align-items-center mt-2 mb-5">
+                                    <div className="moreinfo d-flex justify-content-end align-items-center mt-2 mb-5s">
                                         <Link to={'./Addmoney'} className="btn btnshtomonedha">Shto monedha</Link>
                                         <span
                                             className="totali font-weight-bold ml-2 h2">
@@ -46,9 +49,13 @@ class Dashboard extends Component {
                                                 <span>{item.name}</span>
                                                 <span>{item.price} E</span>
                                                 <div className="actions">
-                                                    <button className="btn mr-1">
+                                                    <Link className="btn mr-1" to={`/EditOutlays/${item.id}`}
+                                                          onClick={() => {
+                                                              localStorage.setItem('editElementName', item.name)
+                                                              localStorage.setItem('editElementPrice', item.price)
+                                                          }}>
                                                         <i className="far fa-edit"></i>
-                                                    </button>
+                                                    </Link>
 
                                                     <button onClick={this.deleteOutlay = () => {
                                                         firebase.firestore().collection(`outlays`).doc(item.id).delete();

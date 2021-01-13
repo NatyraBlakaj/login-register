@@ -8,7 +8,12 @@ export class Provider extends Component {
         isLoggedIn: false,
         outlays: [],
         money: [],
+        edititem:[],
     };
+
+    setItemValue = (itemId) => {
+        this.setState({edititem: itemId});
+    }
 
     componentDidMount() {
         let a = firebase.firestore().collection('outlays');
@@ -29,7 +34,6 @@ export class Provider extends Component {
             querySnapshot.forEach(items => {
                 this.setState({money: items.data()});
             })
-
         })
     }
 

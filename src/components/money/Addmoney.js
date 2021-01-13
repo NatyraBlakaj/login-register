@@ -29,6 +29,7 @@ class Addmoney extends Component {
 
                             activeMoney: Yup.string()
                                 .required('Required')
+                                .min(0,'Number must be positive')
                         })}>
                         {props => {
                             const {
@@ -42,14 +43,16 @@ class Addmoney extends Component {
                             } = props;
                             return (
                                 <div id="money-document">
-                                    <div className="moneyform border p-0 col-lg-4 col-md-7 col-sm-10 col-xs-10 ml-auto mr-auto">
+                                    <div
+                                        className="moneyform border p-0 col-lg-4 col-md-7 col-sm-10 col-xs-10 ml-auto mr-auto">
                                         <div className="card-header h3 addmoney-element">Add money</div>
                                         <div className="card-body">
                                             <form onSubmit={handleSubmit}>
 
                                                 <div className="form-group">
                                                     <input
-                                                        type="text"
+                                                        type="number"
+                                                        min="0"
                                                         name="activeMoney"
                                                         placeholder="Enter Money..."
                                                         value={values.activeMoney}

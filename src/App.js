@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {Provider} from "./components/Context";
 import Addmoney from "./components/money/Addmoney";
 import PrivateRoute from "./components/privateRoute";
+import EditOutlays from "./components/edit/EditOutlays";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                         <Route exact path="/" component={Home}/>
                         <Route exact path={'/Register'} component={Register}/>
                         <PrivateRoute exact path={'/Outlay'} component={Outlay}/>
+                        <PrivateRoute exact path={`/EditOutlays/:id`} component={EditOutlays}/>
                         <PrivateRoute exact path={'/Addmoney'} component={Addmoney}/>
                         <PrivateRoute component={Dashboard} path="/dashboard" exact />
                     </Switch>
