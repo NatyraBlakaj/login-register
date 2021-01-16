@@ -1,17 +1,18 @@
 .home-document-register{
     width: 100%;
     height: 100vh;
-    background:#DDDFDF;
+    background:#EDF0F7;
     padding-top: 50px;
 }
 
 div .register-element{
-    background: #C792DF;
+    background: #01CD98;
+    color: #f3f3f3;
 }
 
 .formregister{
     width: 35%;
-    height: 550px;
+    height: 520px;
     margin-left: 30%;
     background: #f3f3f3;
     box-shadow: 8px 8px 5px #aaaaaa;
@@ -19,9 +20,11 @@ div .register-element{
 
 div .registerbtn{
     height: 50px;
-    margin-top: 50px;
-    background:#C792DF;
+    margin-top: 40px;
+    background:#01CD98;
     border-radius: 6px;
+    color:#f3f3f3;
+    font-size: 22px;
 }
 input{
     margin-top: 20px;

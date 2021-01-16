@@ -40,22 +40,34 @@
 /*    float: right;*/
 /*    margin-top: 50px;*/
 /*}*/
-.navheader{
-    background: #AD9BAA;
+.navheader {
+    background: #01CD98;
 }
-#dashboard-document{
-    background: #DDDFDF;
+
+#dashboard-document {
+    background: #EDF0F7;
     height: 100vh;
 }
-div .btnshtoshpenzim{
-    background:#AD9BAA;
+
+div .btnshtoshpenzim {
+    background: #6bac9c;
+    color: #f3f3f3;
 }
-div .btnshtomonedha{
-    background-color: #ADB6C4;
+
+div .btnshtomonedha {
+    background: #6bac9c;
+    color: #f3f3f3;
 }
-.fa-edit{
-    color:#ADB6C4;
+
+.btnlogout {
+    height: 40px;
+    padding-bottom: 10px;
 }
-.fa-trash-alt{
-    color:#ADB6C4;
+
+.fa-edit {
+    color: #E4C864;
+}
+
+.fa-trash-alt {
+    color: #ADB6C4;
 }

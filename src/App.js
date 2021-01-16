@@ -8,6 +8,9 @@ import {Provider} from "./components/Context";
 import Addmoney from "./components/money/Addmoney";
 import PrivateRoute from "./components/privateRoute";
 import EditOutlays from "./components/edit/EditOutlays";
+import React from "react";
+import LoginPrivateRoute from "./components/LoginPrivateRoute";
+
 
 function App() {
     return (
@@ -15,8 +18,8 @@ function App() {
             <Router>
                 <div className="App">
                     <Switch>
-                        <Route exact path="/" component={Home}/>
-                        <Route exact path={'/Register'} component={Register}/>
+                        <LoginPrivateRoute exact path="/" component={Home}/>
+                        <LoginPrivateRoute exact path={'/Register'} component={Register}/>
                         <PrivateRoute exact path={'/Outlay'} component={Outlay}/>
                         <PrivateRoute exact path={`/EditOutlays/:id`} component={EditOutlays}/>
                         <PrivateRoute exact path={'/Addmoney'} component={Addmoney}/>

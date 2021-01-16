@@ -13,17 +13,8 @@ class Home extends Component {
             <Formik
                 initialValues={{email: '', password: ''}}
                 onSubmit={(values, {setSubmitting}) => {
-                    if (Auth.login(values.email, values.password)) {
-                        this.props.history.push('/Dashboard');
-                    } else {
-                        alert('Kredencialet jane te gabuara')
-                    }
-                    //localStorage.setItem('loggedIn', 'true');
-                    //this.props.history.push('/Dashboard');
-
-
+                    Auth.login(values.email, values.password);
                 }}
-
                 validationSchema={Yup.object().shape({
                     email: Yup.string()
                         .email()
@@ -82,8 +73,8 @@ class Home extends Component {
                                             <div className="input-feedback">{errors.password}</div>
                                         )}
 
-                                        <button className="btn  btn-block loginbtn" type="submit"
-                                                disabled={isSubmitting}>Login
+                                        <button className="btn  btn-block loginbtn" type="submit">
+                                            Login
                                         </button>
 
 

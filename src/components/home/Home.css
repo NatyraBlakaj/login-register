@@ -6,12 +6,13 @@
 #home-document {
     width: 100%;
     height:100vh;
-    background:#DDDFDF;
+    background: #EDF0F7;
     padding-top: 50px;
 }
 
 div.login-element {
-    background-color: #AD9BAA;
+    background-color:#01CD98;
+    color:#f3f3f3;
  /*  background: #C792DF
   background-color: #B3679B;*/
 }
@@ -33,6 +34,8 @@ input{
 div .loginbtn{
     height: 50px;
     margin-top: 50px;
-    background:#AD9BAA;
+    background-color: #01CD98;
     border-radius: 6px;
+    color:#f3f3f3;
+    font-size: 22px;
 }

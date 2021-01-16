@@ -3,6 +3,7 @@ import {Formik} from 'formik';
 import * as EmailValidator from 'email-validator';
 import * as Yup from 'yup';
 import './Register.css';
+import Auth from '../../services/auth';
 
 
 class Register extends Component {
@@ -10,14 +11,12 @@ class Register extends Component {
 
     render() {
         return (
-            <Formik initialValues={{name: '', email: '', password: ''}}
+            <Formik initialValues={{email: '', password: ''}}
                     onSubmit={(values, {setSubmitting}) => {
+                        Auth.register(values.email, values.password);
                     }}
 
                     validationSchema={Yup.object().shape({
-                        name: Yup.string()
-                            .required('Required')
-                            .min(2, 'Name is too short'),
                         email: Yup.string()
                             .email()
                             .required('Required'),
@@ -43,22 +42,6 @@ class Register extends Component {
                                 <div className="card-header h3 mb-3 register-element">Register</div>
                                 <div className="card-body">
                                     <form onSubmit={handleSubmit} className="forma2">
-                                        <div className="form-group">
-
-                                            <input
-                                                name="name"
-                                                type="text"
-                                                placeholder="Enter your name"
-                                                value={values.name}
-                                                onChange={handleChange}
-                                                onBlur={handleBlur}
-                                                className='form-control {errors.name && touched.name && "erros"}'
-                                            />
-                                        </div>
-                                        {errors.name && touched.name && (
-                                            <div className="input-feedback">{errors.name}</div>
-                                        )}
-
                                         <div className="form-group">
 
                                             <input
@@ -91,8 +74,8 @@ class Register extends Component {
                                             <div className="input-feedback">{errors.password}</div>
                                         )}
 
-                                        <button className="btn  btn-block registerbtn " type="submit"
-                                                disabled={isSubmitting}>Register
+                                        <button className="btn  btn-block registerbtn " type="submit">
+                                            Register
                                         </button>
 
                                     </form>
