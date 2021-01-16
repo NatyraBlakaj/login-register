@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Form, Formik} from 'formik';
 import * as Yup from 'yup';
 import {Consumer} from "../Context";
+import firebase from "../../firebase";
 
 
 class EditOutlays extends Component {
@@ -19,8 +20,12 @@ class EditOutlays extends Component {
                             price: `${localStorage.getItem('editElementPrice')}`
                         }}
                         onSubmit={values => {
-
-                            console.log('asd');
+                            const updateRef = firebase.firestore().collection('outlays').doc('MZWcSdsKtjMILNdk2xOF');
+                            updateRef.set({
+                                name: values.name,
+                                price: parseInt(values.price)
+                            });
+                            this.props.history.push('/Dashboard');
                         }}
 
 

@@ -12,18 +12,21 @@
 }
 
 div .addmoney-element {
-    background: #C792DF;
+    background: #01CD98;
+    color:#f3f3f3;
 }
 
 #money-document {
     width: 100%;
     height: 100vh;
-    background: #DDDFDF;
+    background: #EDF0F7;
     padding-top: 50px;
 }
 div .moneybtn{
     height: 50px;
     margin-top: 50px;
-    background:#C792DF;
+    background:#01CD98;
     border-radius: 6px;
+    color:white;
+    font-size: 22px ;
 }

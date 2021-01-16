@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import {Consumer} from "../Context";
 import firebase from "../../firebase";
 import EditOutlays from "../edit/EditOutlays";
+import Auth from "../../services/auth";
+
 
 class Dashboard extends Component {
 
@@ -20,9 +22,11 @@ class Dashboard extends Component {
                             <nav
                                 className="navbar navbar-expand-lg navbar-light navheader d-flex justify-content-between">
                                 <a className="navbar-brand text-white" href="#">Login</a>
-                                <a className="navbar-brand text-white" href="#" onClick={() => {
-                                    localStorage.clear();
-                                }}>Log out</a>
+                                <a className="navbar-brand text-white  btn btnshtomonedha btnlogout "
+                                   onClick={() => {
+                                       Auth.logout();
+                                   }}>
+                                    Log out</a>
                             </nav>
                             <div>
                                 <div className="container">

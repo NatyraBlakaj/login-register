@@ -6,19 +6,22 @@
     box-shadow: 8px 8px 5px #aaaaaa;
 }
 div .add-element{
-    background: #C792DF;
+    background: #01CD98;
+    color: #f3f3f3;
 }
 
 #outlay-document{
     width: 100%;
     height:100vh;
-    background:#DDDFDF;
+    background:#EDF0F7;
     padding-top: 50px;
 }
     
 div .addbtn {
     height: 50px;
     margin-top: 50px;
-    background:#C792DF;
+    background:#01CD98;
     border-radius: 6px;
+    color:#f3f3f3;
+    font-size: 22px;
 }

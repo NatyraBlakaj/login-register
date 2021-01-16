@@ -1,12 +1,36 @@
+import firebase from "firebase";
+
 class Auth {
 
+    register = (email, password) => {
+        firebase.auth().createUserWithEmailAndPassword(email,password)
+            .then((user) => {
+                localStorage.setItem('loggedIn', 'true');
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.log('register failed');
+            });
+    }
+
     login = (email, password) => {
-        if (email === 'blakajnatyra@gmail.com' && password === 'natyra.123') {
-            localStorage.setItem('loggedIn', 'true');
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then((user) => {
+                localStorage.setItem('loggedIn', 'true');
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.log('Login failed');
+            });
+    }
+
+    logout = () => {
+        firebase.auth().signOut().then(() => {
+            localStorage.clear();
             return true;
-        } else {
+        }).catch((error) => {
             return false;
-        }
+        });
     }
 
 }

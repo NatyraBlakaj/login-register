@@ -71,7 +71,8 @@ class Outlay extends Component {
 
                                             <div className="form-group">
                                                 <input
-                                                    type="text"
+                                                    type="number"
+                                                    min="0"
                                                     name="price"
                                                     placeholder="Enter Price..."
                                                     value={values.price}
